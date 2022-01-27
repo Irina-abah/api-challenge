@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import styled from 'styled-components';
 
 function App() {
 
@@ -18,10 +19,20 @@ function App() {
 
   return (
     <div className="container">
-      <button className="header__btn" onClick={updateQuote}>Update quote from Kanye West</button>
+      <Button className="header__btn" onClick={updateQuote}>Update quote from Kanye West</Button>
       <div className="quote">{quote}</div>
     </div>
   );
 }
+
+const Button = styled.button`
+font-size: 1em;
+width: 200px;
+height: 70px;
+background-color: #ffdb4d;
+border-radius: 2px;
+cursor: pointer;
+align-self: center; 
+`
 
 export default App;
